@@ -1,6 +1,7 @@
 class Werewolf {
-  constructor() {
-
+  constructor(name) {
+    this.name = name
+    this.form = 'human'
   }
 }
 
