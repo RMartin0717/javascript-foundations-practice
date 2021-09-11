@@ -4,6 +4,10 @@ class Magician {
     this.assistant = assistant
     this.favoriteAccessory = clothing || 'top hat'
   }
+
+  performIncantation(spell) {
+    return `${spell.toUpperCase()}!`
+  }
 }
 
 module.exports = Magician
