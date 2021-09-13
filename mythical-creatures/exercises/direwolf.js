@@ -15,6 +15,12 @@ class Direwolf {
    }
  }
 
+ leave(stark) {
+   stark.safe = false
+   this.starksToProtect = this.starksToProtect.filter(person => {
+     return person !== stark
+  })
+ }
 }
 
 module.exports = Direwolf

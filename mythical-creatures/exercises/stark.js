@@ -1,3 +1,5 @@
+const Direwolf = require('../exercises/direwolf')
+
 class Stark {
   constructor({ name: name, area: location }) {
     this.name = name
@@ -11,6 +13,12 @@ class Stark {
     } else {
       return 'Winter is Coming'
     }
+  }
+
+  callDirewolf(name, location) {
+    const direwolf = new Direwolf(name, location)
+    direwolf.protect(this.name)
+    return direwolf
   }
 }
 
