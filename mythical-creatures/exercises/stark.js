@@ -1,8 +1,7 @@
 class Stark {
-  constructor({ name: name, location: location }) {
+  constructor({ name: name, area: location }) {
     this.name = name
     this.location = location || 'Winterfell'
-    this.starksToProtect = []
   }
 }
 
