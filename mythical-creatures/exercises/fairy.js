@@ -4,6 +4,7 @@ class Fairy {
     this.dust = 10
     this.clothes = { dresses: ['Iris']}
     this.disposition = 'Good natured'
+    this.humanWards = []
   }
 
   receiveBelief() {
@@ -24,8 +25,12 @@ class Fairy {
 
   replaceInfant(infant) {
     if (this.disposition === 'Vengeful') {
+      this.humanWards = [...this.humanWards, infant]
       let changeling = infant
       changeling.disposition = 'Malicious'
+      if (this.humanWards.length >= 3) {
+        this.disposition = 'Good natured'
+      }
       return changeling
     } else {
       return infant

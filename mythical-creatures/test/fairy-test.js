@@ -108,7 +108,7 @@ describe('Fairy', () => {
     const firstInfant = { name: 'Josiah', eyes: 'Green', disposition: 'Calm' };
 
     const newFirstInfant = fairy.replaceInfant(firstInfant);
-  
+
     assert.deepEqual(newFirstInfant, { name: 'Josiah', eyes: 'Green', disposition: 'Calm' });
   });
 
@@ -122,7 +122,6 @@ describe('Fairy', () => {
     fairy.becomeProvoked();
     fairy.replaceInfant(firstInfant);
     fairy.replaceInfant(secondInfant);
-
     assert.deepEqual(fairy.humanWards, [ firstInfant, secondInfant ]);
   });
 
