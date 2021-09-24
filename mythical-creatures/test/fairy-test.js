@@ -108,8 +108,8 @@ describe('Fairy', () => {
     const firstInfant = { name: 'Josiah', eyes: 'Green', disposition: 'Calm' };
 
     const newFirstInfant = fairy.replaceInfant(firstInfant);
-
-    assert.equal(firstInfant, newFirstInfant);
+  
+    assert.deepEqual(newFirstInfant, { name: 'Josiah', eyes: 'Green', disposition: 'Calm' });
   });
 
   it('should raise stolen infants as its own', () => {

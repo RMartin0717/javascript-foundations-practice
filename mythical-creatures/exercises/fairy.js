@@ -3,6 +3,7 @@ class Fairy {
     this.name = name
     this.dust = 10
     this.clothes = { dresses: ['Iris']}
+    this.disposition = 'Good natured'
   }
 
   receiveBelief() {
@@ -15,6 +16,20 @@ class Fairy {
 
   makeDresses(flowers) {
     this.clothes.dresses = [...this.clothes.dresses, ...flowers]
+  }
+
+  becomeProvoked() {
+    this.disposition = 'Vengeful'
+  }
+
+  replaceInfant(infant) {
+    if (this.disposition === 'Vengeful') {
+      let changeling = infant
+      changeling.disposition = 'Malicious'
+      return changeling
+    } else {
+      return infant
+    }
   }
 }
 
