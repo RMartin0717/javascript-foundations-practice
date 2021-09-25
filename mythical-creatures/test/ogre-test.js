@@ -105,7 +105,7 @@ describe('Ogre', () => {
     ogre.encounter(human);
     ogre.encounter(human);
     ogre.encounter(human);
-
+    
     assert.equal(human.encounterCounter, 6);
     assert.equal(ogre.swings, 2);
     assert.equal(human.knockedOut, true);
