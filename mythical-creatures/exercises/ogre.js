@@ -5,6 +5,7 @@ class Ogre {
   }
   encounter(human) {
     human.encounterCounter++
+    human.noticesOgre()
   }
 }
 
