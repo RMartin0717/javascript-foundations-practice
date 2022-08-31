@@ -132,9 +132,17 @@ describe('Golfer', function () {
     var golfCourse1 = new GolfCourse('Arrowhead', 'hard', 42, ['great views', 'wildlife'])
     var golfer5 = new Golfer({ name: 'Amy', handicap: 3 });
     var golfCourse2 = new GolfCourse('Arrowhead', 'hard', 42, ['undulating greens', 'creative layout'])
+    var golfer6 = new Golfer({ name: 'Chris', handicap: 5 })
+    var golfCourse3 = new GolfCourse('Arctic', 'moderate', 42, [])
+    var golfCourse4 = new GolfCourse('Rainforest', 'moderate', 42, ['coffee'])
+    var golfCourse5 = new GolfCourse('Desert', 'moderate', 42, ['waterfall', 'grass', 'windmill'])
+
 
     assert.equal(golfer4.marvel(golfCourse1), 'I love the great views and wildlife on this course!');
     assert.equal(golfer5.marvel(golfCourse2), 'I love the undulating greens and creative layout on this course!')
+    assert.equal(golfer6.marvel(golfCourse3), 'I love the grass on this course!')
+    assert.equal(golfer6.marvel(golfCourse4), 'I love the coffee on this course!')
+    assert.equal(golfer6.marvel(golfCourse5), 'I love the waterfall, grass, and windmill on this course!')
   });
 
   it('should have their performance on a hole affect their frustration', function () {
