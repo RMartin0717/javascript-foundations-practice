@@ -40,6 +40,21 @@ class Golfer {
       return `I love the ${firstFeaturesList}, and ${lastItem} on this course!`
     }
   }
+
+  whatYaShoot(score) {
+    if(score > 0) {
+      this.frustration += 20
+      return `Doh!`
+    }
+    if(score === 0) {
+      this.frustration -= 10
+      return `Booyah!`
+    }
+    if(score < 0) {
+      this.frustration = 0
+      return `I AM THE GREATEST GOLFER ALIVE!`
+    }
+  }
 }
 
 module.exports = Golfer;
